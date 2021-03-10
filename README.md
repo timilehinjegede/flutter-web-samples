@@ -5,9 +5,9 @@ A repository containing various web samples built with flutter.
 ## Samples
 
 ##### Game Streaming
-![Desktop Preview](https://github.com/timilehinjegede/flutter-web-samples/master/previews/game_streaming/game_streaming.png)
+![Desktop Preview](https://github.com/timilehinjegede/flutter-web-samples/blob/master/previews/game_streaming/game_streaming.png)
 
-[**Link for Code**](https://github.com/timilehinjegede/flutter-web-samples/web_samples/lib/game_streaming)
+[**Link for Code**](https://github.com/timilehinjegede/flutter-web-samples/tree/master/lib/game_streaming)
 
 ## Getting Started
 
