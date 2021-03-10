@@ -26,7 +26,7 @@ class Game {
     Game(
         gameTitle: 'Overwatch',
         numOfViews: '45,967',
-        imgPath: 'assets/images/game_streaming/overwatch4.png',
+        imgPath: 'assets/images/game_streaming/overwatch1.png',
         color: overWatchBg,
         imgHeight: 200,
         positionBottom: 15,
@@ -46,7 +46,7 @@ class Game {
     Game(
         gameTitle: 'Cyberspace',
         numOfViews: '13,933',
-        imgPath: 'assets/images/game_streaming/overwatch2.png',
+        imgPath: 'assets/images/game_streaming/overwatch0.png',
         color: cyberSpaceBg,
         imgHeight: 175,
         positionBottom: 35,
@@ -173,10 +173,10 @@ class Video {
   static List<Video> videoList = [
     Video('assets/images/game_streaming/stream0.jpg'),
     Video('assets/images/game_streaming/stream1.jpg'),
-    Video('assets/images/game_streaming/stream3.jpg'),
+    Video('assets/images/game_streaming/stream2.jpg'),
     Video('assets/images/game_streaming/stream0.jpg'),
     Video('assets/images/game_streaming/stream1.jpg'),
-    Video('assets/images/game_streaming/stream3.jpg'),
+    Video('assets/images/game_streaming/stream2.jpg'),
     Video('assets/images/game_streaming/stream0.jpg'),
   ];
 }

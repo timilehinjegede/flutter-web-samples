@@ -31,8 +31,8 @@ class _ProfileDrawerState extends State<ProfileDrawer> {
                   ),
                 ),
                 StackedAvatars(
-                  imgPath1: 'images/avi0.jpeg',
-                  imgPath2: 'images/avi3.jpg',
+                  imgPath1: 'assets/images/game_streaming/avi0.jpeg',
+                  imgPath2: 'assets/images/game_streaming/avi2.jpg',
                   color: Colors.grey[200],
                   hasBorder: true,
                   number: '+5',
@@ -63,7 +63,35 @@ class _ProfileDrawerState extends State<ProfileDrawer> {
                   ),
                   Row(
                     children: <Widget>[
-                      ProfileLevelUp(),
+                      Stack(
+                        children: <Widget>[
+                          Positioned(
+                            child: Container(
+                              height: 50,
+                              width: 50,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(25),
+                                image: DecorationImage(
+                                  image: AssetImage('assets/images/game_streaming/avatar.jpeg'),
+                                ),
+                              ),
+                            ),
+                            top: 13 / 2,
+                            left: 13 / 2,
+                          ),
+                          Container(
+                            height: 63,
+                            width: 63,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(63 / 2),
+                              border: Border.all(
+                                color: Colors.red,
+                                width: 2.0,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                       SizedBox(
                         width: 20,
                       ),
@@ -93,7 +121,7 @@ class _ProfileDrawerState extends State<ProfileDrawer> {
                           Image(
                             height: 25,
                             width: 25,
-                            image: AssetImage('images/bell.png'),
+                            image: AssetImage('assets/images/game_streaming/bell.png'),
                           ),
                           Positioned(
                             top: 2,
@@ -115,7 +143,7 @@ class _ProfileDrawerState extends State<ProfileDrawer> {
                       Image(
                         height: 25,
                         width: 25,
-                        image: AssetImage('images/shopping-cart.png'),
+                        image: AssetImage('assets/images/game_streaming/shopping-cart.png'),
                       ),
                     ],
                   ),
@@ -150,7 +178,7 @@ class _ProfileDrawerState extends State<ProfileDrawer> {
                         Image(
                           height: 20,
                           width: 20,
-                          image: AssetImage('images/magnifying-glass.png'),
+                          image: AssetImage('assets/images/game_streaming/magnifying-glass.png'),
                         )
                       ],
                     ),
@@ -228,8 +256,8 @@ class _ProfileDrawerState extends State<ProfileDrawer> {
                           ),
                         ),
                         StackedAvatars(
-                          imgPath1: 'images/avi0.jpeg',
-                          imgPath2: 'images/avi1.jpeg',
+                          imgPath1: 'assets/images/game_streaming/avi0.jpeg',
+                          imgPath2: 'assets/images/game_streaming/avi1.jpeg',
                           color: Colors.grey[200],
                           hasBorder: true,
                           number: '+8',
@@ -241,15 +269,15 @@ class _ProfileDrawerState extends State<ProfileDrawer> {
                   SizedBox(
                     height: 20,
                   ),
-                  _buildTeams('BattlefieldV', battleFieldBg),
+                  _BuildGames(name: 'BattlefieldV', color: battleFieldBg),
                   SizedBox(
                     height: 20,
                   ),
-                  _buildTeams('Apex Legends', apexBg),
+                  _BuildGames(name: 'Apex Legends', color: apexBg),
                   SizedBox(
                     height: 20,
                   ),
-                  _buildTeams('Dota 2', dotaBg),
+                  _BuildGames(name: 'Dota 2', color: dotaBg),
                   SizedBox(
                     height: 40,
                   ),
@@ -278,8 +306,16 @@ class _ProfileDrawerState extends State<ProfileDrawer> {
       ],
     );
   }
+}
 
-  Widget _buildTeams(String name, Color color) {
+class _BuildGames extends StatelessWidget {
+  final String name;
+  final Color color;
+
+  const _BuildGames({Key key, this.name, this.color}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       height: 50,
       width: MediaQuery.of(context).size.width,
